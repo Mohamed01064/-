@@ -1,0 +1,93 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* حجم الكروت */
+  gap: 10px; /* تقليل المسافة بين الكروت */
+  padding: 10px; /* حشوة داخلية للـ container */
+}
+
+.product-card {
+  border-radius: 8px; /* زوايا دائرية */
+  border: 1px solid #e0e0e0; /* حد خفيف */
+  padding: 15px; /* حشوة داخلية */
+  text-align: center;
+  background-color: #ffcc80; /* لون خلفية برتقالي فاتح */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  overflow: hidden; /* لإخفاء الزائد */
+}
+
+.product-title {
+  font-size: 18px; /* حجم عنوان المنتج */
+  font-weight: bold; /* خط عريض */
+  margin: 10px 0; /* مسافة حول العنوان */
+  color: #333; /* لون العنوان */
+}
+
+.product-price {
+  font-size: 16px; /* حجم سعر المنتج */
+  color: #d32f2f; /* لون السعر */
+  margin: 5px 0; /* مسافة حول السعر */
+}
+
+.quantity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0; /* تقليل المسافة */
+}
+
+.quantity-container button {
+  width: 30px;
+  height: 30px;
+  background-color: #f57c00; /* لون أزرار */
+  border: none;
+  color: white; /* لون النص */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px; /* زوايا دائرية */
+}
+
+.quantity-container input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd; /* حد خفيف */
+  border-radius: 4px; /* زوايا دائرية */
+  margin: 0 5px; /* مسافة بين الزر والكونتر */
+}
+
+.sold-out {
+  color: red; /* لون النص عند نفاد الكمية */
+  font-weight: bold;
+}
+
+.order-summary {
+  margin-top: 20px; /* المسافة العلوية */
+  padding: 15px; /* حشوة داخلية */
+  background-color: #f0f0f0; /* لون خلفية فاتح */
+  border: 1px solid #ccc; /* حد خفيف */
+  border-radius: 8px; /* زوايا دائرية */
+  text-align: left; /* محاذاة النص لليسار */
+}
+
+.order-summary h3 {
+  color: #333; /* لون عنوان الملخص */
+  margin-bottom: 10px; /* مسافة تحت العنوان */
+}
+
+.order-summary p {
+  color: #555; /* لون النص */
+  margin: 5px 0; /* مسافة فوق وتحت كل فقرة */
+}
+
+button {
+  padding: 10px 15px; /* حشوة داخلية للزر */
+  background-color: #ff5722; /* لون الزر */
+  border: none;
+  color: white; /* لون النص */
+  border-radius: 5px; /* زوايا دائرية */
+  cursor: pointer; /* يد عند التمرير */
+  font-weight: bold; /* نص سميك */
+}
+
+button:hover {
+  background-color: #e64a19; /* لون عند التمرير */
+}

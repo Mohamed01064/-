@@ -1,0 +1,36 @@
+<div class="products-container">
+  <ng-container *ngFor="let product of products">
+    <div *ngIf="product.stock > 0" 
+         [ngClass]="{
+            'yellow-bg': product.stock === 1,
+            'default-bg': product.stock > 1
+         }" 
+         class="product-card">
+      
+      <img [src]="'https://picsum.photos/200/300?random=' + product.id" alt="{{ product.title }}" />
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price | currency }}</p>
+      <p>Remaining: {{ product.stock }}</p>
+
+      <div class="quantity-container">
+        <button (click)="decreaseQuantity(product)">-</button>
+        <input type="number" [value]="product.quantity" readonly>
+        <button (click)="increaseQuantity(product)">+</button>
+      </div>
+
+      <button (click)="buyProduct(product)" [disabled]="product.quantity === 0">Buy</button>
+
+      <div *ngIf="product.stock === 0" class="sold-out">Sold Out!</div>
+    </div>
+  </ng-container>
+</div>
+
+<div *ngIf="orderMessage" class="order-summary">
+  <h3>Order Summary</h3>
+  <p>{{ orderMessage }}</p>
+</div>
+
+<div>
+  <h3>Total Price: {{ totalPrice | currency }}</h3>
+</div>

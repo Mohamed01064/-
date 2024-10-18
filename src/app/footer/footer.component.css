@@ -1,0 +1,23 @@
+.footer {
+  background-color: #f56b2a; /* لون الخلفية للفوتر */
+  color: white; /* لون النص */
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.footer-links {
+  list-style: none; /* إزالة النقاط */
+  display: flex;
+  justify-content: center; /* توسيط العناصر */
+  gap: 15px; /* المسافة بين العناصر */
+}
+
+.footer-links li a {
+  color: white; /* لون النص */
+  text-decoration: none; /* إزالة الخط */
+  transition: color 0.3s; /* تأثير عند التمرير */
+}
+
+.footer-links li a:hover {
+  color: #ffec40; /* لون النص عند التمرير */
+}

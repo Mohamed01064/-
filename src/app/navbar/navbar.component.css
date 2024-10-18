@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f56b2a; /* لون الخلفية للناف بار */
+  padding: 15px 20px;
+  color: white; /* لون النص */
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* لون النص */
+  text-decoration: none; /* إزالة الخط */
+}
+
+.navbar-links {
+  list-style: none; /* إزالة النقاط */
+  display: flex;
+  gap: 15px; /* المسافة بين العناصر */
+}
+
+.navbar-links li a {
+  color: white; /* لون النص */
+  text-decoration: none; /* إزالة الخط */
+  transition: color 0.3s; /* تأثير عند التمرير */
+}
+
+.navbar-links li a:hover {
+  color: #ffec40; /* لون النص عند التمرير */
+}
